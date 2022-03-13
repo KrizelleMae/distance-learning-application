@@ -135,21 +135,22 @@ $user_id = $_SESSION['id'];
 
                <div class="text-sm mt-10 text-gray-800">
                   <div
-                     class="flex flex-row ml-auto mb-3 space-x-3 items-center text-lg"
+                     class="  mb-3 space-x-1 items-center text-lg"
                   >
-                     <span class="font-bold"
+                  
+                     <span class="font-bold "
                         >College/ University Attended:</span
                      >
-
+<br />
                      <span class="font-normal"
                         ><?php echo $row['university'];?></span
                      >
                   </div>
                   <div
-                     class="flex flex-row ml-auto mb-3 space-x-3 items-center text-lg mt-2"
+                     class=" mb-3 space-x-1 items-center text-lg mt-4"
                   >
                      <span class="font-bold">Degree finished:</span>
-
+    <br/> 
                      <span class="font-normal"
                         ><?php echo $row['degree'];?></span
                      >

@@ -25,7 +25,7 @@
                     
                    
                } else {
-                    echo 'invalid code';    
+                    header("location: ../otp.php?message=error");
                }
           }
      }else{

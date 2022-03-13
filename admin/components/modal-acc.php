@@ -9,10 +9,10 @@ while($row = mysqli_fetch_assoc($result)) {
 <ul uk-accordion="collapsible: false">
   <li class="mb-0 uk-open">
     <a
-      class="uk-accordion-title w-full p-4 text-lg text-left bg-blue text-white hover:text-white"
+      class="uk-accordion-title w-full p-4 text-sm text-left bg-blue text-white hover:text-white"
       href="#"
     >
-      <p>What is Flowbite?</p>
+      <p> 1. Why do you want to apply for a master's program for Distance Learning at this university?</p>
     </a>
     <div class="uk-accordion-content m-0 bg-gray-100">
       <div class="py-9 px-10 m-0">
@@ -27,10 +27,10 @@ while($row = mysqli_fetch_assoc($result)) {
   <!-- TWO -->
   <li class="mb-0 ">
     <a
-      class="uk-accordion-title w-full p-4 text-lg text-left bg-blue text-white hover:text-white"
+      class="uk-accordion-title w-full p-4 text-sm text-left bg-blue text-white hover:text-white"
       href="#"
     >
-      <p>What is Flowbite?</p>
+      <p>2. Are you satisfied with the Technology and Software you are going to use for Remote Learning? and why?</p>
     </a>
     <div class="uk-accordion-content m-0 bg-gray-100">
       <div class="py-9 px-10 m-0">
@@ -45,10 +45,10 @@ while($row = mysqli_fetch_assoc($result)) {
   <!-- THREE -->
   <li class="mb-0 ">
     <a
-      class="uk-accordion-title w-full p-4 text-lg text-left bg-blue text-white hover:text-white"
+      class="uk-accordion-title w-full p-4 text-sm text-left bg-blue text-white hover:text-white"
       href="#"
     >
-      <p>What is Flowbite?</p>
+      <p>3. Is online education as effective as face-to-face instruction? and why?</p>
     </a>
     <div class="uk-accordion-content m-0 bg-gray-100">
       <div class="py-9 px-10 m-0">
@@ -63,10 +63,10 @@ while($row = mysqli_fetch_assoc($result)) {
   <!-- FOUR -->
   <li class="mb-0 ">
     <a
-      class="uk-accordion-title w-full p-4 text-lg text-left bg-blue text-white hover:text-white"
+      class="uk-accordion-title w-full p-4 text-sm text-left bg-blue text-white hover:text-white"
       href="#"
     >
-      <p>What is Flowbite?</p>
+      <p>4. How well could you manage your time while learning remotely?</p>
     </a>
     <div class="uk-accordion-content m-0 bg-gray-100">
       <div class="py-9 px-10 m-0">
@@ -81,10 +81,10 @@ while($row = mysqli_fetch_assoc($result)) {
   <!-- FIVE -->
   <li class="mb-0 ">
     <a
-      class="uk-accordion-title w-full p-4 text-lg text-left bg-blue text-white hover:text-white"
+      class="uk-accordion-title w-full p-4 text-sm text-left bg-blue text-white hover:text-white"
       href="#"
     >
-      <p>What is Flowbite?</p>
+      <p>5. How difficult or easy for you to connect to the internet to access your schoolwork?</p>
     </a>
     <div class="uk-accordion-content m-0 bg-gray-100">
       <div class="py-9 px-10 m-0">

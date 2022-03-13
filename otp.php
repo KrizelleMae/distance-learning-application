@@ -34,5 +34,28 @@
         </form>
       </div>
     </div>
+
+     <?php if(isset($_GET['message'])) : ?>
+      <div
+         class="flash-data"
+         data-flashdata="<?php echo $_GET['message']; ?>"
+      ></div>
+      <?php endif; ?>
+
+      <script src="./sweetalert2/jquery-3.6.0.min.js"></script>
+      <script src="./sweetalert2/sweetalert2.all.min.js"></script>
+      <script>
+         const flashdata = $('.flash-data').data('flashdata');
+
+         if (flashdata) {
+            Swal.fire(
+               'Invalid OTP!',
+               'An OTP was sent to your email.',
+               'error'
+            ).then(function () {
+               window.location = './otp.php';
+            });
+         }
+      </script>
   </body>
 </html>

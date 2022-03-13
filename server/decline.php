@@ -55,11 +55,11 @@ $result = mysqli_query($con, $sql);
           //Enable HTML              
           $mail->isHTML(true);
             
-          $mail->Subject = "Congratulations! Your application has been approved.";
+          $mail->Subject = "Application declined! Your application has been declined.";
                         
           //Email bsody
-          $mail->Body = "<h4>Application appoved.</h4>
-                         <p>You may now proceed to enrollment. Please prepare the following: ....</p>";
+          $mail->Body = "<h4>Application declined.</h4>
+                         <p></p>";
     
           //Add recipient
           $mail->addAddress("$email[0]");
