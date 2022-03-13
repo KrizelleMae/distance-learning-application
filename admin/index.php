@@ -2,7 +2,15 @@
 
 require '../includes/db_connection.php';
 
-include './auth.php'
+include './auth.php';
+
+// PENDING
+$get_pending = mysqli_query($con, "select COUNT(*) FROM application where status = 'pending';");
+ $no_of_pending = $get_pending->fetch_row();
+
+ // PENDING
+$all = mysqli_query($con, "select COUNT(*) FROM application;");
+ $all_app = $all->fetch_row();
 
 
 ?>
@@ -34,7 +42,7 @@ include './auth.php'
             </div>
 
             <div class="ml-auto">
-               <a href="./application.php">
+               <a href="./enrollment.php">
                   <button
                      class="bg-gray-800 px-5 py-2 text-lg text-white rounded hover:bg-sky-800"
                   >
@@ -50,9 +58,9 @@ include './auth.php'
                <div>
                   <div class="uk-card shadow-sm bg-white uk-card-body rounded">
                      <div class="text-lg float-left pb-0 mt-1">
-                        Applicants
+                        Pending applicants
                         <div class="text-5xl font-medium text-black pt-2">
-                           20
+                          <?php echo $no_of_pending[0];?>
                         </div>
                      </div>
 
@@ -67,9 +75,9 @@ include './auth.php'
                <div>
                   <div class="uk-card shadow-sm bg-white uk-card-body rounded">
                      <div class="text-lg float-left pb-0 mt-1">
-                         Students Enrolled
+                         Total no of Applicants
                         <div class="text-5xl font-medium text-black pt-2">
-                           50
+                           <?php echo $all_app[0];?>
                         </div>
                      </div>
 
@@ -104,8 +112,8 @@ include './auth.php'
                <div class="uk-card-header">
                   <div class="uk-grid-small uk-flex-middle" uk-grid>
                      <div class="uk-width-expand">
-                        <p class="uk-card-title uk-margin-remove-bottom">
-                           No. of Students Per Program
+                        <p class="uk-card-title uk-margin-remove-bottom text-lg">
+                           No. of Applicants Per Program
                         </p>
                      </div>
                   </div>
@@ -125,7 +133,7 @@ include './auth.php'
                <div class="uk-card-header">
                   <div class="uk-grid-small uk-flex-middle" uk-grid>
                      <div class="uk-width-expand">
-                        <p class="uk-card-title uk-margin-remove-bottom">
+                        <p class="uk-card-title uk-margin-remove-bottom text-lg">
                            Male and Female Students
                         </p>
                      </div>
