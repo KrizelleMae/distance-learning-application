@@ -16,8 +16,7 @@
                 $email = $row["email"];
 
                 if($row["role"] == "admin"){
-                    $_SESSION['admin_user'] = $row["email"];
-                    $_SESSION['admin_pass'] = $row["password"];
+                 
                     $_SESSION['role'] = $row["role"];
                     header("location: ../admin/");
                 } else if ($row["role"] == "student"){
@@ -28,6 +27,7 @@
                         $_SESSION['id'] = $row["id"];
                         $_SESSION['first_name'] = $row["first_name"];
                         $_SESSION['last_name'] = $row["last_name"];
+                         $_SESSION['role'] = $row["role"];
 
                         mysqli_query($con, "delete from otp where expired = 1;");
                         header("location: ../student/");
@@ -40,13 +40,12 @@
                     }
                     
                     
-                    
                 }else{
                    echo "<br/> Not admin";
                 }
             }
         } else {
-              echo "<br/> Invalid account";
+              header("location: ../index.php?message=error");
         }
 
        

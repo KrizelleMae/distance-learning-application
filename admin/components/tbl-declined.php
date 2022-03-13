@@ -57,11 +57,14 @@ $result = mysqli_query($con, $sql);
 
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
-            <?php 
-            if (mysqli_num_rows($result) > 0) {
-              while($row = mysqli_fetch_assoc($result)) {
+           <?php 
+            if (mysqli_num_rows($result) == 0) {
+              echo '<tr class=""><td class="p-5 bg-white"> No data available.</td><td></td> <td><td></td></td><td></td><td></td></tr>';
+            }
+              else {
+                while($row = mysqli_fetch_assoc($result)) {
             ?>
-              
+
               <tr>
                 <td class="px-5 py-3 whitespace-nowrap">
                   <div class="text-sm text-gray-900">

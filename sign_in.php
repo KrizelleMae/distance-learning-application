@@ -7,7 +7,7 @@
       <title>Document</title>
    </head>
    <body>
-      <form action="./server/login.php" method="POST" name="login">
+      <form action="./server/sign-up.php" method="POST" name="login">
          <input
             type="password"
             name="password"

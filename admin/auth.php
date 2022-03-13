@@ -12,7 +12,7 @@ if(isset($_SESSION['role']))
     }
 }
 else{
-    header('location: ../');
+    header('location: ../index.html');
 } 
 
 

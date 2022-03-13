@@ -3,13 +3,14 @@
       <div class="flex items-center float-right">
          <a
             href="../server/logout.php"
-            class="logout text-sky-900 decoration-none font-bold hover:bg-red-700 hover:px-4 py-2 rounded"
+            onclick="confirm('Are you sure you want to logout?');"
+            class="logout text-sky-900 hover:text-decoration-none font-bold hover:bg-red-700 hover:px-4 py-2 rounded"
             >Logout <i class="fa fa-sign-out ml-3" aria-hidden="true"></i
          ></a>
       </div>
       <div class="flex items-center mb-7">
          <img src="../images/logo.png" class="h-14 mr-3" alt="" />
-         <p class="text-2xl text-blue font-bold ">
+         <p class="text-2xl text-sky-900 font-bold ">
             Distance Learning Online Application
          </p>
       </div>

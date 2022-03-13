@@ -67,7 +67,7 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="ml-16">
             <small class=""> Application status: <br /> </small>
             <span
-              class="<?php if($row['status'] == "approved") {echo "bg-green-500"; } else if($row['status'] == "pending") {echo "bg-gray-500"; }?> text-white text-xs font-bold mr-2 px-2.5 py-0.5 rounded"
+              class="<?php if($row['status'] == "approved") {echo "bg-green-500"; } else if($row['status'] == "pending") {echo "bg-gray-500"; } else {echo "bg-red-500";}?> text-white text-xs font-bold mr-2 px-2.5 py-0.5 rounded"
               >  <?php echo $row['status']; ?></span
             >
           </div>
@@ -109,7 +109,7 @@ while($row = mysqli_fetch_assoc($result)) {
       const href = $(this).attr('href')
 
       Swal.fire({
-        title: "Are you sure you?",
+        title: "Approve application?",
         text: "You won't be able to revert this!",
         icon: "warning",
         showCancelButton: true,
@@ -129,7 +129,7 @@ while($row = mysqli_fetch_assoc($result)) {
       const href = $(this).attr('href')
 
       Swal.fire({
-        title: "Are you sure you decline?",
+        title: "Decline application?",
         text: "You won't be able to revert this!",
         icon: "warning",
         showCancelButton: true,
@@ -150,7 +150,9 @@ while($row = mysqli_fetch_assoc($result)) {
         'Record Updated!',
         'Record has been successfully updated.',
         'success'
-      )
+      ).then(function () {
+               window.location = './view-answers.php?id=<?php echo $user_id;?>';
+            })
     }
     </script>
   </body>

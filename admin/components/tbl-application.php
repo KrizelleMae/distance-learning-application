@@ -58,8 +58,11 @@ $result = mysqli_query($con, $sql);
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
             <?php 
-            if (mysqli_num_rows($result) > 0) {
-              while($row = mysqli_fetch_assoc($result)) {
+            if (mysqli_num_rows($result) == 0) {
+              echo '<tr class=""><td class="p-5 bg-white"> No data available.</td><td></td> <td><td></td></td><td></td><td></td></tr>';
+            }
+              else {
+                while($row = mysqli_fetch_assoc($result)) {
             ?>
               
               <tr>
@@ -117,8 +120,9 @@ $result = mysqli_query($con, $sql);
               </tr>
               
               <?php 
+                }
               }
-            }
+            
               ?>
             </tbody>
           </table>

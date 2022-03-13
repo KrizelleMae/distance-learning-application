@@ -34,7 +34,7 @@ include './auth.php'
             </div>
 
             <div class="ml-auto">
-               <a href="./enrollment.php">
+               <a href="./application.php">
                   <button
                      class="bg-gray-800 px-5 py-2 text-lg text-white rounded hover:bg-sky-800"
                   >
@@ -52,7 +52,7 @@ include './auth.php'
                      <div class="text-lg float-left pb-0 mt-1">
                         Applicants
                         <div class="text-5xl font-medium text-black pt-2">
-                           100
+                           20
                         </div>
                      </div>
 
@@ -69,7 +69,7 @@ include './auth.php'
                      <div class="text-lg float-left pb-0 mt-1">
                          Students Enrolled
                         <div class="text-5xl font-medium text-black pt-2">
-                           356
+                           50
                         </div>
                      </div>
 
@@ -84,7 +84,7 @@ include './auth.php'
                      <div class="text-lg float-left pb-0 mt-1">
                         Graduates
                         <div class="text-5xl font-medium text-black pt-2">
-                           100
+                           0
                         </div>
                      </div>
 

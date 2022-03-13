@@ -24,7 +24,7 @@ include '../includes/db_connection.php';
         $query = mysqli_query($con, "update users set status = 'application' where id = $user_id;");
         if($query){
              echo '<script>alert("Success")</script>';
-            header("location:../student/");
+            header("location:../student/index.php");
         }
        
     }else{

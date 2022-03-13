@@ -1,4 +1,3 @@
-
 section {
    position: relative;
    width: 100%;
@@ -6,7 +5,7 @@ section {
    display: flex;
 }
 /* -----------left box css code --------------*/
-section .imgbx::before {
+/* section .imgbx::before {
    content: '';
    position: absolute;
    top: 0;
@@ -17,6 +16,10 @@ section .imgbx::before {
    background: linear-gradient(225deg, gray, #1c62b0);
    z-index: 1;
    mix-blend-mode: screen;
+} */
+
+section .imgbx {
+   opacity: 0.8;
 }
 section .imgbx {
    position: relative;
@@ -73,10 +76,10 @@ section .contentbox .form .inputbox span {
    font-size: 16px;
    letter-spacing: 1px;
 }
-section .contentbox .form .inputbox input {
+/* section .contentbox .form .inputbox input {
    border: 0;
    outline: 0;
-   border-bottom: 1px solid gray;
+   border-bottom: 1px solid gray; 
    width: 100%;
    padding: 10px 20px;
    font-weight: 400;
@@ -85,7 +88,7 @@ section .contentbox .form .inputbox input {
    color: black;
    background-color: transparent;
    border-radius: 3px;
-}
+} */
 section .contentbox .form .inputbox .login-btn {
    background: #1c62b0;
    color: #fff;
@@ -93,23 +96,27 @@ section .contentbox .form .inputbox .login-btn {
    border: none;
    font-weight: 500;
    cursor: pointer;
-   width: 100%;
+   width: 65%;
+   border-radius: 50px;
 }
 section .contentbox .form .inputbox .login-btn:hover {
-   background: #e91e63;
+   background: #134a8a;
    transition: 0.3s;
+   width: 100%;
+   margin-top: 20px;
+   margin-left: 0px;
 }
 section .contentbox .form .inputbox p {
    font-size: 14px;
-   color: black;
+   color: gray;
 }
 section .contentbox .form .inputbox p a {
-   color: #1c62b0;
+   color: lightslategrey;
    text-decoration: none;
 }
 section .contentbox .form .inputbox p a:hover {
-   color: #e91e63;
-   transition: 0.3s;
+   color: #134a8a;
+   font-size: 15px;
 }
 /* -----------end of right box css code --------------*/
 
