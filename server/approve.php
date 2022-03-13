@@ -2,7 +2,6 @@
 session_start();
 include '../includes/db_connection.php';
 
-include '../includes/db_connection.php';
 require '../phpmailer/PHPMailer.php';
 require '../phpmailer/SMTP.php';
 require '../phpmailer/Exception.php';
@@ -14,11 +13,14 @@ use PHPMailer\PHPMailer\Exception;
 $user_id = $_GET["id"];
 
 
-$sql = mysqli_query($con, "select email from users where id = $user_id;");
-$email = $sql->fetch_row();
+$sql = "update application SET status = 'approved' WHERE user_id = $user_id;";
+$result = mysqli_query($con, $sql);
 
+    if ($result) {
 
-if (mysqli_query($con, $sql)) {
+          $get_email = mysqli_query($con, "select email from users where id = $user_id;");
+          $email = $get_email->fetch_row();
+          
 
           //Create instance of PHPMailer
 	        $mail = new PHPMailer();
@@ -57,7 +59,7 @@ if (mysqli_query($con, $sql)) {
                         
           //Email bsody
           $mail->Body = "<h4>Application appoved.</h4>
-                         <p>YOu may now proceed to enrollment. Please prepare the following: ....</p>";
+                         <p>You may now proceed to enrollment. Please prepare the following: ....</p>";
     
           //Add recipient
           $mail->addAddress("$email[0]");
@@ -75,8 +77,8 @@ if (mysqli_query($con, $sql)) {
           }
   
  
-} else {
-  echo "Error updating record: " . mysqli_error($con);
-}
+    } else {
+      echo "Error updating record: " . mysqli_error($con);
+    }
 
 ?>

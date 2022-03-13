@@ -153,13 +153,13 @@
                >
                <select
                   class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-3"
-                  required
+            
                   name="program"
                   required
                >
-                  <option>Please select</option>
-                  <option>Nursing</option>
-                  <option>Education</option>
+                  <option value="">Please select</option>
+                  <option value="Nursing">Nursing</option>
+                  <option value="Education">Education</option>
                </select>
 
                <input

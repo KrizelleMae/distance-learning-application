@@ -59,7 +59,6 @@ $result = mysqli_query($con, $sql);
                title: 'Application submitted!',
                text: 'Thank you for submitting your application. ',
                showConfirmButton: true,
-               timer: 2000,
             }).then(function () {
                window.location = './index.php';
             });

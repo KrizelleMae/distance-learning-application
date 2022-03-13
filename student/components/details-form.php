@@ -155,7 +155,7 @@
          <div class="grid xl:grid-cols-2">
             <div class="col-span-1 xl:mr-10 md:mr-0 mb-10">
                <label class="block mb-2 text-sm font-medium text-gray-700"
-                  >Alternative Email</label
+                  >Alternative Email (or main email)</label
                >
                <input
                   type="text"
@@ -163,6 +163,7 @@
                   name="email"
                   placeholder="johndoe@gmail.com"
                   required
+                 
                />
             </div>
 
@@ -178,7 +179,7 @@
                            type="tel"
                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
                            pattern="{11}[0-9]"
-                           placeholder="johndoe@gmail.com"
+                           placeholder="+639"
                            name="mobile"
                            required
                         />
@@ -189,14 +190,14 @@
                      <div class="col-span-1">
                         <label
                            class="block mb-2 text-sm font-medium text-gray-700"
-                           >Telephone</label
+                           >Telephone (Optional)</label
                         >
                         <input
-                           type="tel"
+                           type="text"
                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
                            placeholder="+639"
                            name="tel"
-                           required
+                        
                         />
                      </div>
                   </div>
