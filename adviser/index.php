@@ -1,18 +1,13 @@
 <?php $page = "dashboard"; 
 
 require '../includes/db_connection.php';
-
 include './auth.php';
 
-// PENDING
-$get_pending = mysqli_query($con, "select COUNT(*) FROM application where status = 'pending';");
- $no_of_pending = $get_pending->fetch_row();
+$sql="SELECT * FROM application";
 
- // PENDING
-$all = mysqli_query($con, "select COUNT(*) FROM application;");
- $all_app = $all->fetch_row();
-
-
+if ($result=mysqli_query($con,$sql)) {
+     $rowcount=mysqli_num_rows($result);
+ }
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +15,12 @@ $all = mysqli_query($con, "select COUNT(*) FROM application;");
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <title>Admin | Dashboard</title>
+      <title>Adviser| Dashboard</title>
       <?php include '../includes/links.php'; ?>
 
       <link rel="stylesheet" href="../css/all-styles.css" />
       <link rel="stylesheet" href="../css/dashboard.css" />
       <link rel="stylesheet" href="../css/navbar.css" />
-       <link rel="icon" type="image/png" href="../favicon.ico"/>
 
       <!-- Charts -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -39,11 +33,11 @@ $all = mysqli_query($con, "select COUNT(*) FROM application;");
       <div class="container mx-auto mt-10">
          <div class="flex items-center">
             <div class="text-3xl text-gray-800 font-semibold">
-               ADMIN DASHBOARD
+               ADVISER DASHBOARD
             </div>
 
             <div class="ml-auto">
-               <a href="./enrollment.php">
+               <a href="./applicants.php">
                   <button
                      class="bg-gray-800 px-5 py-2 text-lg text-white rounded hover:bg-sky-800"
                   >
@@ -59,9 +53,9 @@ $all = mysqli_query($con, "select COUNT(*) FROM application;");
                <div>
                   <div class="uk-card shadow-sm bg-white uk-card-body rounded">
                      <div class="text-lg float-left pb-0 mt-1">
-                        Pending applicants
+                        Applicants
                         <div class="text-5xl font-medium text-black pt-2">
-                          <?php echo $no_of_pending[0];?>
+                           <?php echo ($rowcount); ?>
                         </div>
                      </div>
 
@@ -76,9 +70,9 @@ $all = mysqli_query($con, "select COUNT(*) FROM application;");
                <div>
                   <div class="uk-card shadow-sm bg-white uk-card-body rounded">
                      <div class="text-lg float-left pb-0 mt-1">
-                         Total no of Applicants
+                         Students Enrolled
                         <div class="text-5xl font-medium text-black pt-2">
-                           <?php echo $all_app[0];?>
+                           356
                         </div>
                      </div>
 
@@ -93,7 +87,7 @@ $all = mysqli_query($con, "select COUNT(*) FROM application;");
                      <div class="text-lg float-left pb-0 mt-1">
                         Graduates
                         <div class="text-5xl font-medium text-black pt-2">
-                           0
+                           100
                         </div>
                      </div>
 
@@ -113,18 +107,18 @@ $all = mysqli_query($con, "select COUNT(*) FROM application;");
                <div class="uk-card-header">
                   <div class="uk-grid-small uk-flex-middle" uk-grid>
                      <div class="uk-width-expand">
-                        <p class="uk-card-title uk-margin-remove-bottom text-lg">
-                           No. of Applicants Per Program
+                        <p class="uk-card-title uk-margin-remove-bottom">
+                           Data
                         </p>
                      </div>
                   </div>
                </div>
                <div class="uk-card-body rounded">
-                  <canvas id="barStudents" style="width: 100%"></canvas>
+                  <canvas id="barStudent" style="width: 100%"></canvas>
                </div>
                <div class="uk-card-footer">
                   <a href="#" class="uk-button uk-button-text"
-                     >View enrollees ></a
+                     >View Students ></a
                   >
                </div>
             </div>
@@ -134,7 +128,7 @@ $all = mysqli_query($con, "select COUNT(*) FROM application;");
                <div class="uk-card-header">
                   <div class="uk-grid-small uk-flex-middle" uk-grid>
                      <div class="uk-width-expand">
-                        <p class="uk-card-title uk-margin-remove-bottom text-lg">
+                        <p class="uk-card-title uk-margin-remove-bottom">
                            Male and Female Students
                         </p>
                      </div>

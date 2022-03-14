@@ -11,6 +11,7 @@
     <title>Document</title>
     <script src="./tailwind/tailwind-cdn.js"></script>
     <link rel="stylesheet" href="./css/all-styles.css" />
+     <link rel="icon" type="image/png" href="./favicon.ico"/>
   </head>
   <body>
     <div class="container m-auto my-16 flex justify-center">

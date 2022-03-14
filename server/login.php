@@ -41,7 +41,8 @@
                     
                     
                 }else{
-                   echo "<br/> Not admin";
+                   $_SESSION['role'] = $row["role"];
+                    header("location: ../adviser/");
                 }
             }
         } else {

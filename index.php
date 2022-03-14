@@ -7,6 +7,7 @@
 
       <link rel="stylesheet" href="./css/all-styles.css" />
       <link rel="stylesheet" href="./includes/links.php" />
+      <link rel="icon" type="image/png" href="./favicon.ico"/>
 
       <script src="./tailwind/tailwind-cdn.js"></script>
 
